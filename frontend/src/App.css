@@ -1,0 +1,78 @@
+.row {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* gap: 10px; */
+  /* margin: -10px; */
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  /* padding: 5px; */
+  /* margin: 10px; */
+}
+
+.grid_item {
+  text-align: center;
+  margin: 16px 8px;
+  border: 1px solid lightgrey;
+}
+
+.column img {
+  /* margin: 5px; */
+  vertical-align: middle;
+  width: 100%;
+}
+
+#search {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 12px;
+  gap: 20px;
+}
+
+#search input {
+  width: 300px;
+  height: 30px;
+  font-size: 1.2em;
+  padding-left: 8px;
+}
+
+#search button {
+  font-size: 1.2em;
+}
+
+#pages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 5px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  #search input {
+    width: 150px;
+    height: 30px;
+    font-size: 1.2em;
+    padding-left: 8px;
+  }
+}
